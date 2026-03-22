@@ -1,8 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ═══════════════════════════════════════════════════════════════════
-   THEME — Thay thế hoàn toàn tailwind.config.ts
-   Tailwind v4: mọi custom token khai báo tại đây
+   THEME — Tất cả custom design tokens
    ═══════════════════════════════════════════════════════════════════ */
 @theme {
   /* --- Bảng màu VESTA --- */

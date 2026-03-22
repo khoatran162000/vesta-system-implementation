@@ -13,11 +13,7 @@ export function useAuth() {
   useEffect(() => {
     async function checkAuth() {
       const token = localStorage.getItem("accessToken");
-      if (!token) {
-        setLoading(false);
-        return;
-      }
-
+      if (!token) { setLoading(false); return; }
       try {
         const { data } = await api.get<User>("/auth/me");
         setUser(data);
@@ -28,7 +24,6 @@ export function useAuth() {
         setLoading(false);
       }
     }
-
     checkAuth();
   }, []);
 

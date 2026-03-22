@@ -1,5 +1,3 @@
-// ═══════════════════════ SITE INFO ═══════════════════════
-
 export const SITE_INFO = {
   name: "VESTA",
   tagline: "Fast Track to High Scores · Since 2012",
@@ -12,7 +10,7 @@ export const SITE_INFO = {
   facebookHref: "https://facebook.com/VestaAcademyVN",
   address: "Ngõ 60 Hoàng Quốc Việt, Cầu Giấy, Hà Nội",
   registerLink: "https://goo.gl/xahbn4",
-  achievementsLink: "https://bit.ly/3H01IRL",
+  achievementsLink: "https://www.facebook.com/VestaAcademyVN/photos",
   bankName: "TECHCOMBANK",
   bankAccount: "123777789",
   bankHolder: "VESTA UNI",
@@ -27,9 +25,9 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Các Khóa Học", href: "#courses" },
-  { label: "Học Phí", href: "#tuition" },
-  { label: "Sách & Giáo Trình", href: "#books" },
+  { label: "Các Khóa Học", href: "/#courses" },
+  { label: "Học Phí", href: "/#tuition" },
+  { label: "Sách & Giáo Trình", href: "/#books" },
   { label: "Blog IELTS Tips", href: "/blog" },
   { label: "Đăng Ký Kiểm Tra", href: "/dang-ky-kiem-tra" },
   { label: "Đăng Ký Học", href: SITE_INFO.registerLink, external: true },
@@ -190,11 +188,7 @@ export const COURSES: Course[] = [
       "Quà tặng: Gói ôn luyện Premium Ready của BC trong 123 ngày",
     ],
     meta: [
-      {
-        icon: "💰",
-        label: "4.550.000đ (gốc 4.664.000đ)",
-        chipType: "price",
-      },
+      { icon: "💰", label: "4.550.000đ (gốc 4.664.000đ)", chipType: "price" },
     ],
   },
 ];

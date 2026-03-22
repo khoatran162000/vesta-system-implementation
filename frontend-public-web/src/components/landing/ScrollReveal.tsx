@@ -5,11 +5,7 @@ import { type ReactNode } from "react";
 
 const revealVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
 interface ScrollRevealProps {

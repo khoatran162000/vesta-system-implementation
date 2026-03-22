@@ -1,4 +1,3 @@
-/** Bài viết blog từ API */
 export interface Post {
   id: string;
   authorId: string;
@@ -9,24 +8,14 @@ export interface Post {
   status: "DRAFT" | "PUBLISHED";
   createdAt: string;
   updatedAt: string;
-  author?: {
-    fullName: string;
-    avatarUrl: string | null;
-  };
+  author?: { fullName: string; avatarUrl: string | null };
 }
 
-/** Response phân trang từ API */
 export interface PaginatedResponse<T> {
   data: T[];
-  meta: {
-    total: number;
-    page: number;
-    limit: number;
-    totalPages: number;
-  };
+  meta: { total: number; page: number; limit: number; totalPages: number };
 }
 
-/** User profile */
 export interface User {
   id: string;
   email: string;
@@ -36,7 +25,6 @@ export interface User {
   isActive: boolean;
 }
 
-/** Auth response từ API */
 export interface AuthResponse {
   accessToken: string;
   refreshToken: string;
