@@ -9,6 +9,8 @@ import slugify from "slugify";
 import prisma from "../config/database";
 import * as api from "../utils/apiResponse";
 
+type Params = { [key: string]: string };
+
 // ═══════════════════════ PUBLIC ═══════════════════════
 
 // GET /api/posts?status=PUBLISHED&page=1&limit=10&tag=Listening
@@ -63,7 +65,7 @@ export async function listPosts(req: Request, res: Response) {
 }
 
 // GET /api/posts/:slug
-export async function getPostBySlug(req: Request, res: Response) {
+export async function getPostBySlug(req: Request<Params>, res: Response) {
   try {
     const { slug } = req.params;
 
@@ -134,7 +136,7 @@ export async function listAllPosts(req: Request, res: Response) {
 }
 
 // GET /api/posts/admin/:id
-export async function getPostById(req: Request, res: Response) {
+export async function getPostById(req: Request<Params>, res: Response) {
   try {
     const post = await prisma.post.findUnique({
       where: { id: req.params.id },
@@ -210,7 +212,7 @@ export async function createPost(req: Request, res: Response) {
 }
 
 // PUT /api/posts/:id
-export async function updatePost(req: Request, res: Response) {
+export async function updatePost(req: Request<Params>, res: Response) {
   try {
     const { id } = req.params;
     const { title, excerpt, content, tags, status } = req.body;
@@ -263,7 +265,7 @@ export async function updatePost(req: Request, res: Response) {
 }
 
 // DELETE /api/posts/:id
-export async function deletePost(req: Request, res: Response) {
+export async function deletePost(req: Request<Params>, res: Response) {
   try {
     const { id } = req.params;
 
