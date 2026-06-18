@@ -2,7 +2,7 @@
 
 export function SectionDivider() {
   return (
-    <div className="mx-auto flex max-w-[500px] items-center justify-center gap-0 px-6 py-4">
+    <div className="mx-auto flex max-w-[500px] items-center justify-center gap-0 px-6 py-1">
       {/* Dot trái */}
       <span
         className="inline-block h-[5px] w-[5px] shrink-0 rounded-full"
